@@ -308,7 +308,7 @@ object foodPricesApplication extends App {
     if (basket.isEmpty) {
       println("Basket is currently empty.") // Show if basket is empty
     } else {
-      formatHeader(Seq("Food item","Quantity (kg/l)","Price")) // Get formatted header
+      println(formatHeader(Seq("Food item","Quantity (kg/l)","Price"))) // Get formatted header
       var total = 0.0
       basket.foreach { case (food, quantity) =>
         val price = foodPriceData(food).last * quantity // Calculate items total price using quantity
